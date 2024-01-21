@@ -210,3 +210,67 @@ sudo du -h /root
 
 (image 20)
 
+## `shred`
+
+The shred command in Linux is your go-to utility for securely deleting files. If you ever wanted a file to be almost impossible to recover, shred can help you with this task.
+
+When a file is deleted, it first gets moved to the trash and as soon as you clear off the trash the files get deleted for the file system. But the file is still there on your hard drive, and it could be recovered.
+
+In order to delete a file completely from a hard disk “shred” is used in Linux. 
+
+This command overwrites the contents of a file multiple times, using patterns chosen to maximize the destruction of the residual data, making it harder for even very expensive hardware probing to recover it. 
+
+Syntax:
+```sh
+
+shred [OPTION] <FILE>
+
+If you want to delete the file right away, you can use the -u flag
+
+shred -u <FILE>
+
+shred destroyfile.txt
+
+shred -u destroyfile.txt
+
+```
+
+(image 21)
+
+In this first example we can see that the file was shredded in place (it was not immediately deleted) and the contents of the file have become unreadable.
+
+To delete it permanently we can then use the `rm` command.
+
+However, the next example, as seen in the screenshot below, we used th `-u` flag along with the `shred` command and so the file was deleted as soon as the shred was complete.
+
+By running the `ls` command immediately afterwards we can see that the file no longer exists in that directory.
+
+(image 22)
+
+## `histroy`
+
+To reuse previously run commands you can simply tap your arrow up key on your keyboard.
+
+To view the commands you have been running, perhaps after you ran the `clear` command use the `history` command as shown below.
+
+Syntax:
+
+```sh
+
+history
+```
+
+(image 23)
+
+The number of command saved in our history is determined by the value our HISTSIZE and echo HISTFILESIZE. 
+
+Basically, **HISTSIZE** is the number of commands saved during your current session and **HISTFILESIZE** is the number of commands that will be remembered across sessions (even after a restart). 
+
+To view what the values of your HISTSIZE and HISTFILESIZE are, use the command below:
+
+```sh
+echo $HISTSIZE
+echo $HISTFILESIZE
+```
+
+That concludes this exercise, I've been able to highlight 10 additional Linux commands that will be useful in your day to day use of the L9nux operating system.

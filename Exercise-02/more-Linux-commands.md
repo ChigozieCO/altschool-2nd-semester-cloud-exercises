@@ -119,3 +119,94 @@ The 'e' attribute indicates that the file is using extents for mapping the block
 In the screenshot below I remove the "i" attribute using `chattr -i <filename>` and run the `lsattr` command again.
 
 (image 17)
+
+## `stat`
+
+The stat command is used to display file or file system status. It gives information about the file and filesystem.
+
+Stat command gives information such as the size of the file, access permissions and the user ID and group ID, birth time access time of the file.
+
+It retrieves information such as file type; access rights in octal and human-readable; SELinux security context string; time of file creation, last data modification time, and last accessed. 
+
+When invoked without any options (as can be seen in the screenshot), stat command displays the following file information like: 
+
+- File name, 
+- file size, 
+- number of allocated blocks, 
+- blocksize, 
+- file type, 
+- device number, 
+- inode number, 
+- number of hard links, 
+- access file permissions in numeric or symbolic form, 
+- last time the file was accessed, 
+- last time the file’s content was modified and 
+- last time the file’s attribute or content was changed.
+
+Syntax: 
+
+```sh
+
+stat <file>
+
+stat /etc/hosts
+```
+
+(image 18)
+
+It has several options one of which is an option to specify a custom format instead of the default, for displaying information.
+
+## `service`
+
+The service command is used to run a System V init script. 
+
+Usually all system V init scripts are stored in /etc/init.d or /usr/local/etc/init.d/ or /etc/rc.d/ or /usr/local/etc/rc.d/ directory and service command can be used to start, stop, and restart the daemons and other services under Linux. 
+
+All scripts in /etc/init.d accepts and supports at least the start, stop, and restart commands.
+
+Syntax:
+
+```sh
+
+service <SCRIPT-Name> <COMMAND>
+
+or
+
+sudo service <SCRIPT-Name> <COMMAND>
+
+sudo service ssh status
+```
+
+The COMMAND can be at least start, stop, status, and restart. You must run service command as the root user. Typically one can gain root access using the "su" or "sudo" command on Linux.
+
+In the example below I check the ssh status using the `service` command.
+
+(image 19)
+
+## `du`
+
+The ‘du’ command in Linux helps you keep track of your disk usage. This command is a powerful tool that provides detailed information about the space consumed by files and directories.
+
+The output of this command will show you the total disk usage of the specified directory, including all of its subdirectories. 
+
+The number displayed is the total size of all the files and directories contained within the specified directory, measured in kilobytes.
+
+But what if you want to see the size of each subdirectory individually? You can do this by using the ‘-h’ option with the ‘du’ command. 
+
+This option makes the output easier to read by displaying the sizes in a ‘human-readable’ format (i.e., in kilobytes (K), megabytes (M), gigabytes (G), etc.).
+
+Syntax:
+
+```sh
+
+du <file or directory>
+
+du /etc/init.d
+
+du -h /etc/init.d
+
+sudo du -h /root
+```
+
+(image 20)
+

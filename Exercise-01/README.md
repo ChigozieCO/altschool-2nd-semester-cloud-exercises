@@ -18,4 +18,4 @@ I successfully created an Ubuntu 20.04 LTS using Vagrant, here is a screenshot o
 
 (image 54)
 
-Find my Vagranrfile [here](./Vagrantfile)
+Find my Vagrantfile [here](./Vagrantfile)

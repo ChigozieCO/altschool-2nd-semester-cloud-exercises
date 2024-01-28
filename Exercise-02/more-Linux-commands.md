@@ -20,7 +20,7 @@ It is used to identify the kind of command you are dealing with.
 
 It helps you determine whether a command is an alias, a shell built-in, a file, or a function.
 
-Syntax:
+### Syntax:
 
 ```sh
 type <command>
@@ -29,7 +29,7 @@ type cat
 
 ```
 
-(image 12)
+![type-comand](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/941f38c6-9335-409d-ad5b-638808c40cf4)
 
 ## `which`
 
@@ -38,7 +38,7 @@ It does this by searching for an executable or script in the directories listed 
 
 Sometimes there is more than one version of an executable program installed on a system. To determine the exact location of a given executable, the which command is used.
 
-Syntax:
+### Syntax:
 
 ```sh
 which <command>
@@ -48,7 +48,7 @@ which sudo
 
 which works on only executable programs, not builtins or aliases that are substitutes for actual executable programs. Hence why there is no response when I ran the `which cd` command in the screenshot below.
 
-(image 13)
+![which-command](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/3f564843-2fbd-4392-a58e-82e27b7d87b5)
 
 ## `apropos`
 
@@ -58,7 +58,7 @@ This command is used to search the man page files. It is particularly useful whe
 
 It searches the Linux man page with the help of the keyword provided by the user to find the command and its functions.
 
-Syntax:
+### Syntax:
 
 ```sh
 apropos [option] <keyword>
@@ -66,7 +66,7 @@ apropos [option] <keyword>
 apropos 
 ```
 
-(image 14)
+![apropos](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/bfc966e8-16f8-465b-9254-188e9197b11f)
 
 ## `chattr`
 
@@ -79,11 +79,11 @@ It is particularly useful to secure your important file systems like:
 - /etc/ssh/*
 - /etc/xinetd.d/*
 
-NOTE: 
+**NOTE:** 
 
 Once you add '+i' attribute to any file even the root user will not be allowed to make any changes in that file unless you change the attribute using '-i'
 
-Syntax:
+### Syntax:
 
 ```sh
 chattr +i <filename>
@@ -93,7 +93,7 @@ chattr +i /etc/hosts // to add the security attribute that ensure no one (even r
 chattr -i /etc/hosts // to remove the attribute
 ```
 
-(image 15)
+![chattr](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/dc717ed2-cb7e-4296-9894-9458a0fb8836)
 
 ## `lsattr`
 
@@ -101,7 +101,7 @@ This command list file attributes on a Linux second extended file system.
 
 By default `ls` command will not show the permission attributes applied by `chattr` so we must use `lsattr` to get these details.
 
-Syntax:
+### Syntax:
 
 ```sh
 
@@ -110,7 +110,7 @@ lsattr <filename>
 lsattr /etc/hosts
 ```
 
-(image 16)
+![lsattr](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/c6b0b25b-9387-43e0-a1fc-2018637afc4b)
 
 In the above screenshot we can see the "i" attribute which we added with chattr in the previous example.
 
@@ -118,7 +118,7 @@ The 'e' attribute indicates that the file is using extents for mapping the block
 
 In the screenshot below I remove the "i" attribute using `chattr -i <filename>` and run the `lsattr` command again.
 
-(image 17)
+![lsattr-again](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/6bc96a43-2ba0-4e08-8b77-7eedf28151bc)
 
 ## `stat`
 
@@ -143,7 +143,7 @@ When invoked without any options (as can be seen in the screenshot), stat comman
 - last time the file’s content was modified and 
 - last time the file’s attribute or content was changed.
 
-Syntax: 
+### Syntax: 
 
 ```sh
 
@@ -152,7 +152,7 @@ stat <file>
 stat /etc/hosts
 ```
 
-(image 18)
+![stat](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/823dafbd-1fed-49b2-9dca-bd10c418c56c)
 
 It has several options one of which is an option to specify a custom format instead of the default, for displaying information.
 
@@ -164,7 +164,7 @@ Usually all system V init scripts are stored in /etc/init.d or /usr/local/etc/in
 
 All scripts in /etc/init.d accepts and supports at least the start, stop, and restart commands.
 
-Syntax:
+### Syntax:
 
 ```sh
 
@@ -181,7 +181,7 @@ The COMMAND can be at least start, stop, status, and restart. You must run servi
 
 In the example below I check the ssh status using the `service` command.
 
-(image 19)
+![service-command](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/f9b53d56-93dd-43bd-90d4-13828429197f)
 
 ## `du`
 
@@ -195,7 +195,7 @@ But what if you want to see the size of each subdirectory individually? You can 
 
 This option makes the output easier to read by displaying the sizes in a ‘human-readable’ format (i.e., in kilobytes (K), megabytes (M), gigabytes (G), etc.).
 
-Syntax:
+### Syntax:
 
 ```sh
 
@@ -208,7 +208,7 @@ du -h /etc/init.d
 sudo du -h /root
 ```
 
-(image 20)
+![du-command](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/26f73bb7-2ee6-49fc-a3ce-ea840bdfb29f)
 
 ## `shred`
 
@@ -220,7 +220,7 @@ In order to delete a file completely from a hard disk “shred” is used in Lin
 
 This command overwrites the contents of a file multiple times, using patterns chosen to maximize the destruction of the residual data, making it harder for even very expensive hardware probing to recover it. 
 
-Syntax:
+### Syntax:
 ```sh
 
 shred [OPTION] <FILE>
@@ -235,17 +235,17 @@ shred -u destroyfile.txt
 
 ```
 
-(image 21)
+![shred](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/2073cb08-a096-486f-9549-dae050cd0d14)
 
 In this first example we can see that the file was shredded in place (it was not immediately deleted) and the contents of the file have become unreadable.
 
 To delete it permanently we can then use the `rm` command.
 
-However, the next example, as seen in the screenshot below, we used th `-u` flag along with the `shred` command and so the file was deleted as soon as the shred was complete.
+However, the next example, as seen in the screenshot below, we used the `-u` flag along with the `shred` command and so the file was deleted as soon as the shred was complete.
 
 By running the `ls` command immediately afterwards we can see that the file no longer exists in that directory.
 
-(image 22)
+![shred-with-flag](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/648dce7c-4e27-4aec-b0b3-767edd5a2f93)
 
 ## `histroy`
 
@@ -253,14 +253,14 @@ To reuse previously run commands you can simply tap your arrow up key on your ke
 
 To view the commands you have been running, perhaps after you ran the `clear` command use the `history` command as shown below.
 
-Syntax:
+### Syntax:
 
 ```sh
 
 history
 ```
 
-(image 23)
+![history-command](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/ba339f04-a483-4f87-bbb4-8f3ee9cc609e)
 
 The number of command saved in our history is determined by the value our HISTSIZE and echo HISTFILESIZE. 
 
@@ -273,4 +273,4 @@ echo $HISTSIZE
 echo $HISTFILESIZE
 ```
 
-That concludes this exercise, I've been able to highlight 10 additional Linux commands that will be useful in your day to day use of the L9nux operating system.
+That concludes this exercise, I've been able to highlight 10 additional Linux commands that will be useful in your day to day use of the Linux operating system.

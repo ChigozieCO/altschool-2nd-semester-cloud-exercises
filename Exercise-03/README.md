@@ -32,7 +32,7 @@ Because my vagrant machine already had an `admin` group I didn't have to create 
 
 Here is a snippet of my `/etc/group` file showing the new groups.
 
-(image 1)
+![groups](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/1e58b3d2-ab87-4eed-bab8-85f97db19986)
 
 Find a copy of the contents of the [`/etc/group`](./etc-group) file.
 
@@ -78,7 +78,7 @@ anulika ALL=(ALL) ALL
 
 Here is a snippet of my `/etc/sudoers` file.
 
-(image 4)
+![sudoers](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/eadac618-252d-4d76-a770-50c057f0c33b)
 
 Find a copy of the contents of the [`/etc/sudoers`]() file.
 
@@ -113,7 +113,7 @@ usermod -aG engineering anita
 
 Here is a snippet of my `/etc/passwd` file showing the new users.
 
-(image 2)
+![passwd](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/33d693cb-1689-4e78-88dd-b550c59a4d40)
 
 Find a copy of the contents of the [`/etc/passwd`](./etc-passwd) file.
 
@@ -132,7 +132,7 @@ cd ~
 
 - `cd /` navigates to the root directory.
 
-(image 3)
+![pro-tip](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/36fc891a-3bdb-4dc2-8163-9deabe27371b)
 
 Now I then created SSH key pair for this user with the command below:
 
@@ -140,5 +140,5 @@ Now I then created SSH key pair for this user with the command below:
 ssh-keygen
 ```
 
-(image 47)
+![ssh-keygen](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/53e27fb1-0abe-42de-abc0-bccc5843f630)
 

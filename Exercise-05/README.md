@@ -17,7 +17,7 @@ git log
 
 Below is a screenshot of the `git config -l` command.
 
-(image 13)
+![git config -l output](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/bae5a7a5-f34c-4fa4-b7d4-3b69861b309c)
 
 Find the text file [here](./git-config.txt)
 
@@ -25,7 +25,7 @@ Find the text file [here](./git-config.txt)
 
 Below is a screenshot of the `git remote -v` command.
 
-(image 14)
+![git remote output](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/c52b5be2-d1a3-421b-b660-d83f365fb2d9)
 
 Find the text file [here](./git-remote.txt)
 
@@ -33,6 +33,6 @@ Find the text file [here](./git-remote.txt)
 
 Below is a screenshot of the `git log` command.
 
-(image 15)
+![git log output](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/e6bb6fec-43b4-4b75-a736-a05de52661e7)
 
 Find the text file [here](./git-log.txt)

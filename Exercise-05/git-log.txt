@@ -1,0 +1,89 @@
+commit ceb831ddbabf0e82dec127d23e6f51bb6075a323
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Fri Feb 2 01:52:32 2024 +0100
+
+    Update exercise 4
+
+commit 8ffcf7acf5dfb23255a2bef3ab40cfb12fd1d048
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Fri Feb 2 01:33:43 2024 +0100
+
+    Added the soures.list file
+
+commit 4f0a05312fd90202a5888439ffa86bb89adfaf0a
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Fri Feb 2 01:33:00 2024 +0100
+
+    Implemented and documented solution for exercise 4
+
+commit bd1b6c50a52d4fb75daaec6b12213801862f27ba
+Author: ChigozieCO <107365067+ChigozieCO@users.noreply.github.com>
+Date:   Sun Jan 28 23:29:01 2024 +0100
+
+    Update README.md with images.
+
+commit 8d6e0d907e0c33aabb1ee61864fb9bf1b77c8cd3
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Sun Jan 28 23:19:25 2024 +0100
+
+    Update Readme with link to Exercise 3
+
+commit 19b9b622dc0e935391598bfc1af8757f7af5ac76
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Sun Jan 28 23:17:37 2024 +0100
+
+    Added solution for Exercise-03
+
+commit c1cffffcb55762321dcdb73186c1140da5d2132e
+Author: ChigozieCO <107365067+ChigozieCO@users.noreply.github.com>
+Date:   Sun Jan 28 18:06:40 2024 +0100
+
+    Update more-Linux-commands.md with images
+
+commit abeb04e2f1e9974e8d3349c2daafc0c28d0cca79
+Author: ChigozieCO <107365067+ChigozieCO@users.noreply.github.com>
+Date:   Sun Jan 28 17:45:37 2024 +0100
+
+    Update README.md with images.
+
+commit 1d98311d072894a81eee5b113993f637f3748cf8
+Author: ChigozieCO <107365067+ChigozieCO@users.noreply.github.com>
+Date:   Sun Jan 28 17:40:26 2024 +0100
+
+    Update table of content
+
+commit 56f933d97182b1951f92ce6e3c0c7e8d84f8036f
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Sun Jan 28 17:36:43 2024 +0100
+
+    Added a readme for the entire repo
+
+commit 69d6cd32f9c52f5995f37e39988fda7131984c73
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Fri Jan 26 16:54:55 2024 +0100
+
+    Spelling correction
+
+commit a5fe2f5882f4420a2c18aca319be470c0e4809c4
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Fri Jan 26 16:50:50 2024 +0100
+
+    Added Exercise 1
+
+commit 4ad67968ba1b9cd7a1bc86d181ae8fb16a2aca4a
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Sun Jan 21 22:39:59 2024 +0100
+
+    Added more commands to complete exercise 2
+
+commit 209fa57f1b2f78d28d05b981c2cc042e7783e9bc
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Sun Jan 21 21:55:36 2024 +0100
+
+    Added more commands to exercise 2
+
+commit 20f21d116b0cd53f9096daeae48bf88a2912384d
+Author: ChigozieCO <chiggy.nm@gmail.com>
+Date:   Sat Jan 20 00:21:18 2024 +0100
+
+    Initial commit of Linux commands for Exercise 2

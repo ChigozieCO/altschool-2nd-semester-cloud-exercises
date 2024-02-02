@@ -68,10 +68,10 @@ To confirm that the installation was truly successful, I run the command below t
 php -v
 ```
 
-(image 10)
+(image 11)
 
 ## Content of `/etc/apt/sources.list`
 
 Below is a screenshot of the content of my `/etc/apt/sources.list` and you can find the txt file [here](./sources.list)
 
-(image 10)
+(image 12)

@@ -160,7 +160,7 @@ To create a new user and force the user to change their password upon the first 
 
 I then used the `passwd` command to set a password for the user.
 
-Finally I used the `-e` flag along with the `passwd` command to expire the password so that they are prompted to change their password upon their next login.
+Finally I used the `-e` flag along with the `passwd` command to expire the password so that they are prompted to change their password upon their first login.
 
 The commands are shown below:
 
@@ -180,7 +180,7 @@ I also repeated same process in another VM of mine that had a GUI then logged ou
 
 (virtualbox login gif)
 
-## J. Lock a users password
+## J. Lock a Users Password
 
 I decided to lock the password of this new user I created. 
 
@@ -192,7 +192,7 @@ passwd -l assignmentuser
 
 (image 68)
 
-When I try to switch to that user now you can see that their is an authentication error.
+When I try to switch to that user now you can see that there is an authentication error.
 
 (image 69)
 
@@ -206,5 +206,88 @@ And now when I try to switch to the user, it is successful as can be seen in the
 
 (image 70)
 
-## Create a user with no login shell
+## K. Create a User With no Login Shell
 
+There are various ways you can employ to create a non login user.
+
+They include the following:
+
+- Assign the `/bin/false` shell to the user during creation.
+
+- Assign the `/usr/sbin/nologin` to the user during creation.
+
+- Create a user using the `adduser` command specifying the `--system` flag. (This will create a system user that has no login shell)
+
+-  Create a user using the `adduser` command specifying the `--disable-login` flag. (Here, until a password is created for the user, the account will be inactive.)
+
+For this question I will be creating my no login shell user called `uno` with the second method. 
+
+I will assign the `/usr/sbin/nologin` shell to the user and also ensure no home directory is created for said user.
+
+I do this with the command below:
+
+```sh
+sudo useradd -M -s /usr/sbin/nologin uno
+```
+
+From the screenshot below one can see that the user was created successfully, we can see the shell attached to the user when we list the content of the `/etc/passwd` file.
+
+We can also see that even though I was allowed to assign a password to the user, when I try to switch to that user I am told that the `account is currently not available.` 
+
+(image 71)
+
+## L. Disable Password Based Authentication for SSH
+
+To disable password-based authentication for SSH and only allow SSH key-based authentication, we need to modify the SSH daemon configuration file (`sshd_config`)
+
+To do this I opened the SSH daemon configuration file for editing. 
+
+This file is typically located at `/etc/ssh/sshd_config`. You'll need root privileges to edit this file.
+
+I used the vim editor:
+
+```sh
+sudo vi /etc/ssh/sshd_config
+```
+
+(image 74)
+
+I look for the part of the document that has to do with authentication, particularly the line that has the word `PasswordAuthentication` as shown below:
+
+(image 72)
+
+And I uncomment it (to enter the insert mode in vim, punch the `i` key on your keyboard):
+
+(image 73)
+
+And I save the document (to save a change in vim after inserting, leave the insert mode by punching the `esc` key then type `:wq`)
+
+To effect the changes made I have to restart the SSH service like so:
+
+```sh
+sudo systemctl restart ssh
+```
+
+(image 75)
+
+## M. Disable Root Login for SSH
+
+The same way the previous instruction required me to edit the `/etc/ssh/sshd_config` file, the solution to this also requires that I edit said file again.
+
+So I repeat the above process again but this time I will edit the part of the document that mentions `PermitRootLogin`.
+
+```sh
+sudo vi /etc/ssh/sshd_config
+```
+
+I uncomment the line shown and change the value to no like so:
+
+(image 76)
+
+```sh
+PermitRootLogin no
+```
+
+(image 77)
+
+I saved the file and restarted the SSH service with the `sudo systemctl restart ssh` command.

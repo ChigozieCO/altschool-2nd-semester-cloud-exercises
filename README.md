@@ -16,4 +16,8 @@ In this repo you will find all the Exercises I completed while watching my LMS c
 
 - [x] 5. [Exercise 5](./Exercise-05/) - Setup your Git config, submit Submit the output of: `git config -l`, `git remote -v`, and `git log`.
 
-- [ ] 6. [Assignment 01](./06-Assignment-01/) - Create a user and perform some tasks using the user. More instructions in the file.
+- [x] 6. [Assignment 01](./06-Assignment-01/) - Create a user and perform some tasks using the user. More instructions in the file.
+
+- [ ] 7. Exercise 6 -
+
+- [ ] 8. Exercise 7 -

@@ -6,7 +6,7 @@ To begin this assignment, I created a new user called altschool, with home direc
 sudo adduser --home /home/altschool --shell /bin/bash altschool
 ```
 
-(image 55)
+![create-user](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/9eea9984-adda-440b-bf33-a2f9df8ad89f)
 
 The main difference between the `adduser` and the `useradd` command is that the `adduser` will prompt you to create a password if you don't use any flag that specifies that the user should not have a password whereas the `useradd` command will not prompt you to create a password for the user. You will have to do that manually.
 
@@ -19,7 +19,7 @@ su altschool
 cd ~
 ```
 
-(image 56)
+![switch user](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/28240fdb-03a4-4f60-aa76-ac3db56000c0)
 
 Next I created the necessary sub-directories that were mentioned in the assignment.
 
@@ -29,7 +29,7 @@ I created them all at the same time with one command:
 mkdir code tests personal misc 
 ```
 
-(image 57)
+![create directories](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/ef37dab3-b559-4931-a132-c17751ed0330)
 
 ## A. Change Directory to the `tests` Directory Using Absolute Pathname.
 
@@ -41,7 +41,7 @@ To change directory using absolute path I use the command below:
 cd /home/altschool/tests/
 ```
 
-(image 58)
+![change directory with absolute path](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/2baa1fc9-54eb-4831-9b9e-3afc034ec766)
 
 ## B. Change Directory to the `tests` Directory Using Relative Pathname.
 
@@ -55,6 +55,8 @@ To change directory using absolute path I use the command below:
 cd tests
 ```
 
+![change directory with relative path](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/f644c9c7-d9fa-460b-a97b-a9b52c8e137a)
+
 ## C. Use `echo` Command to Create a File
 
 The `echo` command displays a line of text to standard output.
@@ -67,7 +69,7 @@ To do this I used the command below:
 echo "Hello A" > misc/fileA
 ```
 
-(image 60)
+![create file with echo](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/ad68aed5-1265-4172-b70f-dd2319051e72)
 
 ## D. Create an Empty File and Populate Afterwards
 
@@ -83,7 +85,7 @@ To populate `fileB` with dummy content I used my vim editor.
 vi misc/fileB
 ```
 
-(image 61)
+![create empty file](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/c5a9cc0c-98e6-4da2-9461-456a8444c54b)
 
 ## E. Copy Contents of `fileA` into `fileC`
 
@@ -93,7 +95,7 @@ To copy contents of one file into another file I use the `cp` command.
 cp misc/fileA misc/fileB
 ```
 
-(image 62)
+![copy file contents](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/7a433e65-d578-4178-93a4-7e6284f7760c)
 
 ## F. Move Contents of `fileB` into `fileD`
 
@@ -103,7 +105,7 @@ To move contents of one file into another file I use the `mv` command.
 mv misc/fileB misc/fileD
 ```
 
-(image 63)
+![move file](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/c8021809-3c62-4776-89d8-07caabd66cd6)
 
 ## G. Create a Tar Archive
 
@@ -139,7 +141,7 @@ To create a tar archive for the contents of the misc directory I used the below 
 tar -cvf misc.tar misc
 ```
 
-(image 64)
+![create tar archive](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/6652e80d-7a89-4711-96ab-2300653f660d)
 
 ## H. Compress the Tar Archive.
 
@@ -153,7 +155,7 @@ tar -czvf misc.tar.gz misc.tar
 
 The `z` specifies the Gzip compression.
 
-(image 65)
+![compress tar archive](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/8bd29f75-4beb-4310-a325-e10235d01c50)
 
 ## I. Create a User and Force the User to Change his/her Password Upon Login
 To create a new user and force the user to change their password upon the first login, I first used the `useradd` command with the `-m` and `-s` flags to create a home directory and specify their default shell.
@@ -170,15 +172,15 @@ sudo passwd assignmentuser
 sudo passwd -e assignmentuser
 ```
 
-(image 66)
+![expire user password](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/33a9b99b-e8d8-4908-947d-4eaa574fb9d1)
 
 To demonstrate the effectiveness of the above command I tried to switch user in my vagrant machine and was asked to change my password.
 
-(image 67)
+![user login cli](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/2a30ab05-e66f-40d4-9b1b-b7153456955f)
 
 I also repeated same process in another VM of mine that had a GUI then logged out and tried to login as the new user and I was asked to change password.
 
-(virtualbox login gif)
+![user login GUI](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/5abf01d5-37b8-4c50-9093-927361b28bb1)
 
 ## J. Lock a Users Password
 
@@ -190,11 +192,11 @@ To do this I used the command below:
 passwd -l assignmentuser
 ```
 
-(image 68)
+![Lock user password](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/cc4fe570-6d68-4569-877d-92ecce596b44)
 
 When I try to switch to that user now you can see that there is an authentication error.
 
-(image 69)
+![authentication error](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/9639b6b5-45eb-4e99-a882-f84d1d25620b)
 
 To unlock the user's password I used the command below:
 
@@ -204,7 +206,7 @@ passwd -u assignmentuser
 
 And now when I try to switch to the user, it is successful as can be seen in the screenshot.
 
-(image 70)
+![unlock password](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/507b9452-86b4-41ff-a6b6-e13fb3620f49)
 
 ## K. Create a User With no Login Shell
 
@@ -234,7 +236,7 @@ From the screenshot below one can see that the user was created successfully, we
 
 We can also see that even though I was allowed to assign a password to the user, when I try to switch to that user I am told that the `account is currently not available.` 
 
-(image 71)
+![create non login user](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/76b3075f-87cd-4ad7-a069-58cbf2adf92f)
 
 ## L. Disable Password Based Authentication for SSH
 
@@ -250,15 +252,15 @@ I used the vim editor:
 sudo vi /etc/ssh/sshd_config
 ```
 
-(image 74)
+![command to edit /etc/ssh/sshd_config file](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/a2746c6b-31c0-4a03-bd53-c47062a944cd)
 
 I look for the part of the document that has to do with authentication, particularly the line that has the word `PasswordAuthentication` as shown below:
 
-(image 72)
+![/etc/ssh/sshd_config file](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/0417cf08-1e3b-403d-801b-3e020dd6bc55)
 
 And I uncomment it (to enter the insert mode in vim, punch the `i` key on your keyboard):
 
-(image 73)
+![edit /etc/ssh/sshd_config file](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/ebdf4811-208b-4d49-bc95-bce23ac76a77)
 
 And I save the document (to save a change in vim after inserting, leave the insert mode by punching the `esc` key then type `:wq`)
 
@@ -268,7 +270,7 @@ To effect the changes made I have to restart the SSH service like so:
 sudo systemctl restart ssh
 ```
 
-(image 75)
+![restart ssh](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/ef1dc8ea-47db-4a4c-aa5b-9d5a0c429f40)
 
 ## M. Disable Root Login for SSH
 
@@ -282,12 +284,12 @@ sudo vi /etc/ssh/sshd_config
 
 I uncomment the line shown and change the value to no like so:
 
-(image 76)
+![/etc/ssh/sshd_config file](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/dbac6fbe-ae9b-4369-81d6-e5d1b20d62e2)
 
 ```sh
 PermitRootLogin no
 ```
 
-(image 77)
+![edit /etc/ssh/sshd_config](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/69159ab3-d344-4a28-9de9-ecb5d4a6ed6a)
 
 I saved the file and restarted the SSH service with the `sudo systemctl restart ssh` command.

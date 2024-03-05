@@ -18,6 +18,8 @@ In this repo you will find all the Exercises I completed while watching my LMS c
 
 - [x] 6. [Assignment 01](./06-Assignment-01/) - Create a user and perform some tasks using the user. More instructions in the file.
 
-- [ ] 7. Exercise 6 -
+- [ ] 7. Exercise 8 - Create a bash script to run at every hour, saving system memory (RAM) usage to a specified file and at midnight it sends the content of the file to a specified email address, then starts over for the new day. 
 
-- [ ] 8. Exercise 7 -
+- [ ] 8. Exercise 9 - Create an Ansible Playbook to setup a server with Apache. More instructions in the file.
+
+- [ ] 9. [Assignment 02]

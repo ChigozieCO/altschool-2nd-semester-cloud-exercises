@@ -6,6 +6,8 @@ if [ "$1" == '-d' ]; then
   # This if statement checks if the directory is passed by the user and asks the user to specify a directory or file if none is passed.
   if [ $# == 1 ]; then
     echo "Usage: $0 [OPTION] <file or directory to check it's disk usage>"
+    echo "-d: all files and directory within the specified directory or directories should be listed"
+    echo "-n: top N entries should be returned"
     echo "eg $0 -d /etc"
     exit 1
   fi
@@ -27,6 +29,8 @@ elif [ "$1" == '-n' ]
     # Next, before running the command, ensure that a file or directory is passed. If it isn't alert user of the usage
     if [ $# == 2 ]; then
       echo "Usage: $0 [OPTION] <file or directory to check it's disk usage>"
+      echo "-d: all files and directory within the specified directory or directories should be listed"
+      echo "-n: top N entries should be returned"
       echo "eg $0 -n 9 /etc"
       exit 1
     fi
@@ -38,6 +42,8 @@ elif [ "$1" == '-n' ]
 elif [ $# == 0 ]
 then
   echo "Usage: $0 [OPTION] <file or directory to check it's disk usage>"
+  echo "-d: all files and directory within the specified directory or directories should be listed"
+  echo "-n: top N entries should be returned"
   echo "eg $0 -d /etc"
   exit 1
 

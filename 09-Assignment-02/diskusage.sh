@@ -12,12 +12,12 @@ if [ "$1" == '-d' ]; then
     exit 1
   fi
 
-  du -ha $2 | sort -rh # check disk usage, list all files and directories in that path then sort then in descending order of disk usage.
+  du -ha "$2" | sort -rh # check disk usage, list all files and directories in that path then sort then in descending order of disk usage.
 
 # Check if it is the '-n' flag that is passed and specify the action to take in that case.
 elif [ "$1" == '-n' ]
   then
-  entries=$2
+  entries="$2"
     
     # This if statement is to ensure that an integer is passed along with the '-n' flag. If it isn't, specify the correct syntax to the user.
     if [[ ! $2 =~ ^[0-9]+$ ]]; then
@@ -38,7 +38,7 @@ elif [ "$1" == '-n' ]
     fi
 
   # If everything is in order, run the command below:
-  du -ha $3 | sort -rh | head -n $entries
+  du -ha "$3" | sort -rh | head -n "$entries"
 
 # Set the default behaviour of the script when no flag is passed
 # When no argument is passed at all
@@ -52,6 +52,6 @@ then
 
 # When only the directory name is passed, output the disk usage of the top 8 files and directories.
 else
-  du -ha $1 | sort -rh | head -n 8
+  du -ha "$1" | sort -rh | head -n 8
 fi
 

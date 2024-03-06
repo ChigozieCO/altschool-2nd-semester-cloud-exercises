@@ -22,6 +22,8 @@ elif [ "$1" == '-n' ]
     # This if statement is to ensure that an integer is passed along with the '-n' flag. If it isn't, specify the correct syntax to the user.
     if [[ ! $2 =~ ^[0-9]+$ ]]; then
       echo "Usage: $0 -n [number of entries] [FILE or DIRECTORY]"
+      echo "-d: all files and directory within the specified directory or directories should be listed"
+      echo "-n: top N entries should be returned"
       echo "eg $0 -n 6 /etc"
       exit 1
     fi

@@ -72,11 +72,11 @@ I ensured I specified the script usage as well as explain the various available 
 
 The screenshot below shows the error message.
 
-(image 1)
+![error message](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/fdfad1bc-2178-4095-9161-0e1e19aa7cba)
 
 When the script is run with a file or directory passed, it runs correctly as shown below:
 
-(image 2)
+![directory argument passed](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/f2e9a4e3-0040-4642-a605-5293a5376bef)
 
 We can only see 8 entries because as specified in the question, it is the default behaviour of the script to return only the top 8 entries when no flag is passed by the user. 
 
@@ -86,11 +86,11 @@ The `d` flag is another argument that can be passed by the user but it isn't com
 
 When it is passed however, the disk usage of all the files and subdirectories are listed as against the default script behaviour of listing just the top 8.
 
-(image 3)
+![d flag output](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/f9ea7faf-1f7a-4db0-8403-8eaf244f0197)
 
 I also wrote an IF statement ensuring that the script also checks to ensure that the user passes the compulsory directory name along with the flag. If the directory name is not passed it throws an error:
 
-(image 4)
+![d flag error](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/8097d6ab-0c03-4bae-a1cc-ed59d92ad3d9)
 
 ## Behaviour When the `n` Flag is Passed
 
@@ -98,17 +98,17 @@ The final argument we were asked to implement was the `n` flag, it is also an op
 
 This flag will allow the user specify the number of entries they want the script to output. This is useful when the user wants to output more than the default 8 entries but less than the full list of files and subdirectories.
 
-(image 5)
+![n flag output](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/80a8a3ba-954d-4a22-90d3-3fe75b5c9313)
 
 The user will also need to specify the number of entries they want. I wrote an IF statement to check that an integer is passed next to the `n` flag as this is what will let the script know the number of entries to output to the user.
 
 If no integer is passed, and error is thrown:
 
-(image 6)
+![n flag error](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/7f6e639e-fcb5-49c7-b078-4640c7232095)
 
 Further, I ensure my compulsory argument is passed along with the `n` flag and the integer. If not it throws an error as seen:
 
-(image 7)
+![n flag error](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/d46c3b3a-a388-49ac-a758-e65eb1d5c083)
 
 The full script can be found [here](./diskusage.sh)
 
@@ -123,18 +123,20 @@ Next I ensured the user had `tar` installed on their system, in the case that th
 ## Behaviour When no (or More Than Two) Argument(s) is Passed
 Next I ensured that two arguments (and only two) are compulsorily passed by the user, the logic here is that even if the user wants to backup multiple files or directories, they would have to first put them all in one directory with which they will work with.
 
-(image 8)
+![no argument passed](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/0a800cb1-32b4-443e-b723-3142012819cf)
 
 ## Behaviour When the First Argument Passed is not a Directory
 After making sure the user was passing 2 arguments, I ensured that the first argument was a directory and that a directory is created for the second argument if it doesn't already exist.
 
 The script will throw an error at this point if it encounters a problem when trying to create a directory.
 
-(image 9)
+![non directory](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/f23eadae-f6f4-4ed6-99ce-1d21410db2ba)
 
 ## Working Script
 Now we are ready to backup once you have passed two arguments with the first one being the source directory that you want to backup.
 
-(image 10)
+![working script](https://github.com/ChigozieCO/altschool-2nd-semester-cloud-exercises/assets/107365067/3f855b56-95d3-4c9d-99a5-888b9dbe8496)
 
 We can see some of the previous backups as well and they are saved as tar archives with timestamps.
+
+The backup script is found [here](./backup.sh)

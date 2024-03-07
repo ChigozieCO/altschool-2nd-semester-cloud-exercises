@@ -42,7 +42,7 @@ Find detailed explanation and tests for the two scripts.
 
 Conditions specified in the question for the two scripts were put to test and passed.
 
-## Disk Usage Script
+# Disk Usage Script
 
 The requirements for this script was very specific, the script is meant to check disk usage of any user supplied directory or file.
 
@@ -64,7 +64,7 @@ The resulting script can be found [here](./diskusage.sh).
 
 Using various IF statements and differing conditions I was able to satisfy all the specifications of the scrip and this is demonstrated in the screenshots below.
 
-### Ensure a Directory is Passed by the User Compulsorily
+## Ensure a Directory is Passed by the User Compulsorily
 
 Running the script with no argument supplied by the user will throw an error.
 
@@ -112,3 +112,29 @@ Further, I ensure my compulsory argument is passed along with the `n` flag and t
 
 The full script can be found [here](./diskusage.sh)
 
+# Backup Script
+
+This was a pretty straightforward script and can be found [here](./backup.sh)
+
+I started out setting a variable for the filename and timestamp as these would be used in the naming convention of the backup.
+
+Next I ensured the user had `tar` installed on their system, in the case that they don't, tar would be installed for them.
+
+## Behaviour When no (or More Than Two) Argument(s) is Passed
+Next I ensured that two arguments (and only two) are compulsorily passed by the user, the logic here is that even if the user wants to backup multiple files or directories, they would have to first put them all in one directory with which they will work with.
+
+(image 8)
+
+## Behaviour When the First Argument Passed is not a Directory
+After making sure the user was passing 2 arguments, I ensured that the first argument was a directory and that a directory is created for the second argument if it doesn't already exist.
+
+The script will throw an error at this point if it encounters a problem when trying to create a directory.
+
+(image 9)
+
+## Working Script
+Now we are ready to backup once you have passed two arguments with the first one being the source directory that you want to backup.
+
+(image 10)
+
+We can see some of the previous backups as well and they are saved as tar archives with timestamps.

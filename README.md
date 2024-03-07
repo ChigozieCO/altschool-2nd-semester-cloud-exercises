@@ -22,4 +22,4 @@ In this repo you will find all the Exercises I completed while watching my LMS c
 
 - [ ] 8. Exercise 9 - Create an Ansible Playbook to setup a server with Apache. More instructions in the file.
 
-- [ ] 9. [Assignment 02]
+- [x] 9. [Assignment 02] - Create a disk usage script and a backup script. More instructions in the file.

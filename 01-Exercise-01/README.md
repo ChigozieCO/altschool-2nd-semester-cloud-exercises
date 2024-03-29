@@ -20,3 +20,5 @@ I successfully created an Ubuntu 20.04 LTS using Vagrant, here is a screenshot o
 
 
 Find my Vagrantfile [here](./Vagrantfile)
+
+Here is a [walkthrough](https://dev.to/chigozieco/install-virtual-machine-with-vagrant-remotely-access-it-4k5j) I wrote to explain the steps involved.

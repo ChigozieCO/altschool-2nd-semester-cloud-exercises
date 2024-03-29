@@ -24,4 +24,4 @@ In this repo you will find all the Exercises I completed while watching my LMS c
 
 - [x] 9. [Assignment 02](./09-Assignment-02/) - Create a disk usage script and a backup script. More instructions in the file.
 
-- [x] 10. [Assignment 03](./10-Assignment-03/) - Write an anisible playbook to setup an Apache webserver on Ubuntu and a CentOS servers.
+- [x] 10. [Assignment 03](./10-Assignment-03/) - Write an ansible playbook to setup an Apache webserver on Ubuntu and a CentOS servers.

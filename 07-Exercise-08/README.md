@@ -5,3 +5,11 @@ Create a bash script to run at every hour, saving system memory (RAM) usage to a
 # Instruction
 
 Submit the content of your script, cronjob and a sample of the email sent, all in the folder for this exercise.
+
+# Solution
+For this exercise, I wrote the script and then setup the email sending application
+
+## Install Mailx and Postfix
+
+The whole process involved in this was documented in [this post]() I wrote. I had to ensure I can send out a mail effectively first.
+

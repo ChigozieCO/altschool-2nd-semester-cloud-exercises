@@ -22,4 +22,4 @@ And submission deadline would be on or before 6pm next Saturday 
 
 My ansible playbook is found [here](./ansible/playbook/serverplay.yml)
 
-A walkthrough of my process is published [her](https://dev.to/chigozieco/install-apache-web-server-and-serve-a-custom-webpage-using-ansible-3n73) take a look at it.
+A walkthrough of my process is published [here](https://dev.to/chigozieco/install-apache-web-server-and-serve-a-custom-webpage-using-ansible-3n73) take a look at it.
